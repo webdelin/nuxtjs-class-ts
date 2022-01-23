@@ -1,17 +1,19 @@
 <template>
-  <Tutorial />
+  <div class="flex justify-center items-center h-screen">
+    <Counter msg="Counter" />
+  </div>
 </template>
 
-
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import Tutorial from '@/components/Tutorial.vue'
+import { Component, Vue } from 'nuxt-property-decorator'
+
 @Component({
-  components: {
-    Tutorial
-  }
+  layout: 'default',
+  name: 'Index',
 })
-export default class PageIndex extends Vue {
-  message: string = 'This is a message'
+
+export default class Index extends Vue {
+
 }
+
 </script>
