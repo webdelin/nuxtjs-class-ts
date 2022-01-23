@@ -14,7 +14,7 @@ export default {
 
   css: [],
 
-  plugins: [],
+  plugins: ['~/plugins/vxm.ts'],
 
   components: true,
 

@@ -2,19 +2,16 @@
   <div>
     <h1>{{ msg }}</h1>
     <div>
+      <div>State: {{ count }}</div>
       <button class="btn" @click="add">+</button>
       <button @click="subtract">-</button>
     </div>
-    <div>State: {{ counter }}</div>
-    <div>Getter: {{ getCounter }}</div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { namespace } from 'vuex-class'
-
-const counterModule = namespace('counter')
+import { vxm } from '@/store';
 
 @Component({
   name: 'Counter',
@@ -23,16 +20,15 @@ export default class Counter extends Vue {
   @Prop({ type: String })
   private msg!: string
 
-  @counterModule.State('_count')
-  private counter!: number
+  public get count(): number {
+    return vxm.counter.count;
+  }
+  public add(): void {
+    vxm.counter.add();
+  }
+  public subtract(): void {
+    vxm.counter.subtract();
+  }
 
-  @counterModule.Getter('count')
-  private getCounter!: () => number
-
-  @counterModule.Action
-  private add!: () => Promise<void>
-
-  @counterModule.Action
-  private subtract!: () => Promise<void>
 }
 </script>

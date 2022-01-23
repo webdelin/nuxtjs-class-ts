@@ -1,6 +1,8 @@
 <template>
   <div class="flex justify-center items-center h-screen">
     <Counter msg="Counter" />
+    <hr>
+    <Categories />
   </div>
 </template>
 
@@ -12,8 +14,6 @@ import { Component, Vue } from 'nuxt-property-decorator'
   name: 'Index',
 })
 
-export default class Index extends Vue {
-
-}
+export default class Index extends Vue {}
 
 </script>
