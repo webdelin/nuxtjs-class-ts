@@ -1,4 +1,6 @@
-export default {
+import type { NuxtConfig } from '@nuxt/types'
+const isDev: boolean = process.env.NODE_ENV !== 'production'
+const config: NuxtConfig = {
   head: {
     title: 'nuxt-class-ts',
     htmlAttrs: {
@@ -12,6 +14,8 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
+  loading: { color: '#0c64c1' },
+  dev: isDev,
   css: [],
 
   plugins: ['~/plugins/vxm.ts'],
@@ -24,6 +28,19 @@ export default {
   ],
 
   modules: ['@nuxtjs/axios'],
-
-  build: {}
+  router: {
+    middleware: ['mobile']
+  },
+  typescript: {
+    typeCheck: {
+      eslint: true
+    }
+  },
+  build: {
+        extend(config: Object, ctx: Object) {
+      console.log(config, ctx)
+    }
+  }
 }
+
+export default config

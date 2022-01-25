@@ -10,7 +10,7 @@
 import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({
-  layout: 'default',
+  layout: 'mobile',
   name: 'Index',
 })
 

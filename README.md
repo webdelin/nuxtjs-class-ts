@@ -1,4 +1,6 @@
 # nuxt-class-ts
+https://github.com/nuxt/nuxt.js/issues/7651
+https://github.com/sketchnotes/nuxt-express-ts/blob/master/server/nuxt.d.ts
 
 ## Build Setup
 
