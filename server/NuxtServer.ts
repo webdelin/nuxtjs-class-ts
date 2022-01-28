@@ -1,0 +1,56 @@
+import express from 'express'
+import consola from 'consola'
+import { Nuxt, Builder } from 'nuxt'
+
+import config from '../nuxt.config'
+import { PORT } from './'
+
+export class NuxtServer {
+  // Note: Nuxt is still stubbed out, are there corresponding nuxt types?
+  app: any;
+  host: any;
+  nuxt: any;
+  port: number;
+  started: boolean;
+
+  constructor (port?: number) {
+    this.app = express()
+    this.nuxt = new Nuxt(config)
+
+    this.host = this.nuxt.options.server.host
+    this.port = port || PORT
+
+    this.started = false
+  }
+
+  async buildNuxt () {
+    const builder = new Builder(this.nuxt)
+    await builder.build()
+  }
+
+  async start () {
+    await this.nuxt.ready()
+
+    // NOTE: remove "!this.started || " if you want to skip building one time on production start
+
+    // Build once in production and every time in dev mode if this.start() is called
+    if (!this.started || config.dev) {
+      await this.buildNuxt()
+    }
+
+    // Start the server one time only
+    if (!this.started) {
+      // Give nuxt middleware to express
+      this.app.use(this.nuxt.render)
+      // Listen to the server
+      this.app.listen(this.port, this.host)
+      // flag that the server is already running
+      this.started = true
+
+      consola.ready({
+        message: `Server listening on http://${this.host}:${this.port}`,
+        badge: true
+      })
+    }
+  }
+}

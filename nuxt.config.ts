@@ -13,7 +13,7 @@ const config: NuxtConfig = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-
+  telemetry: false,
   loading: { color: '#0c64c1' },
   dev: isDev,
   css: [],
@@ -29,17 +29,9 @@ const config: NuxtConfig = {
 
   modules: ['@nuxtjs/axios'],
   router: {
-    middleware: ['mobile']
-  },
-  typescript: {
-    typeCheck: {
-      eslint: true
-    }
+    middleware: ['user-agent']
   },
   build: {
-        extend(config: Object, ctx: Object) {
-      console.log(config, ctx)
-    }
   }
 }
 

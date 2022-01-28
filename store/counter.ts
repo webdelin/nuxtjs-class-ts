@@ -1,4 +1,4 @@
-import { Module, VuexModule, mutation, action } from 'vuex-class-component'
+import { Module, VuexModule, mutation, action } from 'vuex-class-component';
 
 @Module({ namespacedPath: 'counter', target: 'nuxt' })
 export class StoreCounter extends VuexModule {
