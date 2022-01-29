@@ -12,6 +12,10 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+  server: {
+    host: '0.0.0.0',
+    port: 333
+  },
   css: [],
   plugins: [],
   components: true,
