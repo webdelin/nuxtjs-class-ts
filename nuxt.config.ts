@@ -3,7 +3,7 @@ module.exports = {
   head: {
     title: 'nuxt-typescript-decorators',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'de'
     },
     meta: [
       { charset: 'utf-8' },
