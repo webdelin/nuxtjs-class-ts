@@ -3,23 +3,15 @@
     <div>
       <Counter msg="Counter" />
       <Logo />
-      <h1 class="title">nuxt-typescript-decorators</h1>
+      <h1 class="title">nuxt-typescript-class</h1>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
+          href="https://webdelin.de"
           target="_blank"
           rel="noopener noreferrer"
           class="button--green"
         >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
+          webdelin.de
         </a>
       </div>
     </div>
