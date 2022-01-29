@@ -1,6 +1,6 @@
 export { NuxtServer } from './NuxtServer'
 
-export const PORT = 3000
+export const PORT =  3000
 
 export const FOLDER_NAMES = `
   assets

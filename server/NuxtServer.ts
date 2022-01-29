@@ -1,9 +1,9 @@
 import express from 'express'
 import consola from 'consola'
-import { Nuxt, Builder } from 'nuxt'
+import {Builder, Nuxt} from 'nuxt'
 
 import config from '../nuxt.config'
-import { PORT } from './'
+import {PORT} from './'
 
 export class NuxtServer {
   // Note: Nuxt is still stubbed out, are there corresponding nuxt types?
@@ -13,7 +13,7 @@ export class NuxtServer {
   port: number;
   started: boolean;
 
-  constructor (port?: number) {
+  constructor(port?: number) {
     this.app = express()
     this.nuxt = new Nuxt(config)
 
@@ -23,12 +23,12 @@ export class NuxtServer {
     this.started = false
   }
 
-  async buildNuxt () {
+  async buildNuxt() {
     const builder = new Builder(this.nuxt)
     await builder.build()
   }
 
-  async start () {
+  async start() {
     await this.nuxt.ready()
 
     // NOTE: remove "!this.started || " if you want to skip building one time on production start

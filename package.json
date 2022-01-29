@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "ts-node --project server/tsconfig.json server/server-dev.ts",
-    "build": "nuxt-ts build",
+    "build": "nuxt build",
     "start": "cross-env NODE_ENV=production ts-node --project 'server/tsconfig.json' server/server-prod.ts",
-    "generate": "nuxt-ts generate",
+    "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "test": "jest"
