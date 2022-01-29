@@ -1,24 +1,43 @@
-import { Module, VuexModule, mutation, action } from 'vuex-class-component';
+import { createModule, mutation, action } from 'vuex-class-component';
 
-@Module({ namespacedPath: 'counter', target: 'nuxt' })
-export class StoreCounter extends VuexModule {
-  public count = 0;
+const VuexModule = createModule({
+  namespaced: 'counter',
+  strict: false,
+  target: 'nuxt'
+});
 
-  @mutation addToCount() {
-    this.count++
+export default class Counter extends VuexModule {
+  // state
+  private _count = 0;
+
+  // getters
+  get count(): number {
+    return this._count;
   }
 
-  @mutation subtractFromCount() {
-    if (this.count > 0) {
-      this.count--
+  // mutations
+  @mutation
+  public addToCount() {
+    this._count++;
+  }
+
+  @mutation
+  public subtractFromCount() {
+    if (this._count > 0) {
+      this._count--;
     }
   }
 
-  @action async add(): Promise<void> {
-    this.addToCount()
+  // actions
+  // eslint-disable-next-line require-await
+  @action
+  public async add(): Promise<void> {
+    this.addToCount();
   }
 
-  @action async subtract(): Promise<void> {
-    this.subtractFromCount()
+  // eslint-disable-next-line require-await
+  @action
+  public async subtract(): Promise<void> {
+    this.subtractFromCount();
   }
 }

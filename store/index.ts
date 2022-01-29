@@ -1,19 +1,22 @@
-import Vuex from 'vuex'
-import {StoreCounter} from './counter'
-import {StoreCategory} from './category'
+import Vue from 'vue';
+import Vuex from 'vuex';
+import { extractVuexModule, createProxy } from 'vuex-class-component';
+import Counter from './counter';
 
-export const store = new Vuex.Store({
+Vue.use(Vuex);
+
+const store = new Vuex.Store({
   modules: {
-    category: StoreCategory.ExtractVuexModule(StoreCategory),
-    counter: StoreCounter.ExtractVuexModule(StoreCounter)
-  },
-  strict: false
-})
-export interface VXM {
-  counter: StoreCounter;
-  category: StoreCategory;
-}
-export const vxm = {
-  category: StoreCategory.CreateProxy(store, StoreCategory),
-  counter: StoreCounter.CreateProxy(store, StoreCounter),
+    ...extractVuexModule(Counter)
+  }
+});
+
+const createStore = () => {
+  return store;
 };
+
+const vxm = {
+  counter: createProxy(store, Counter)
+};
+
+export default createStore;
