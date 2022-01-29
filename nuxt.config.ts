@@ -13,7 +13,7 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   server: {
-    host: '0.0.0.0',
+    host: '124.0.0.1',
     port: 333
   },
   css: [],
