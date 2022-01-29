@@ -15,6 +15,7 @@ const createStore = () => {
   return store;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const vxm = {
   counter: createProxy(store, Counter)
 };

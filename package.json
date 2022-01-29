@@ -1,7 +1,7 @@
 {
   "name": "nuxt-typescript-decorators",
   "version": "1.0.0",
-  "private": false,
+  "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.ts --watch server",
     "build": "nuxt-ts build",
