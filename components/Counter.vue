@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ message }}</h1>
     <div>
-      <button @click="add">+</button>
-      <button @click="subtract">-</button>
+      <button class="button" @click="add">+</button>
+      <button class="button" @click="subtract">-</button>
     </div>
     <div>State: {{ counter }}</div>
     <div>Getter: {{ getCounter }}</div>
@@ -21,7 +21,7 @@ const counterModule = namespace('counter');
 })
 export default class Counter extends Vue {
   @Prop({ type: String })
-  private msg!: string;
+  private message!: string;
 
   @counterModule.State('_count')
   private counter!: number;
@@ -36,3 +36,16 @@ export default class Counter extends Vue {
   private subtract!: () => Promise<void>;
 }
 </script>
+<style lang="css" scoped>
+.button {
+  background: #bbbbbb;
+  border: none;
+  padding: 6px 12px;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #008800;
+}
+</style>

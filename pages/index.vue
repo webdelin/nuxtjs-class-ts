@@ -1,9 +1,10 @@
 <template>
   <div class="container">
     <div>
-      <Counter msg="Counter" />
       <Logo />
-      <h1 class="title">nuxt-typescript-class</h1>
+      <h1 class="title">Nuxtjs Class</h1>
+      <h2>class, typescript, decorators</h2>
+      <Counter message="Counter" />
       <div class="links">
         <a
           href="https://webdelin.de"
@@ -42,17 +43,9 @@ export default class Home extends Vue {}
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 3rem;
   color: #35495e;
   letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
 }
 
 .links {
