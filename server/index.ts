@@ -3,6 +3,7 @@ import consola from 'consola';
 import { Nuxt, Builder } from 'nuxt';
 const app = express();
 const PORT = process.env.PORT || 3001;
+
 const config = require('../nuxt.config.ts');
 config.dev = process.env.NODE_ENV !== 'production';
 
@@ -24,7 +25,7 @@ async function start(): Promise<void> {
   // Listen the server
   app.listen(PORT, host);
   consola.ready({
-    message: `Server listening on http://${host}:${PORT}`,
+    message: `Server listening ${config.dev} on http://${host}:${PORT}`,
     badge: true
   });
 }

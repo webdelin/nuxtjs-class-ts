@@ -30,9 +30,9 @@
 import { Component, Vue } from 'nuxt-property-decorator';
 
 @Component({
-  name: 'Index'
+  name: 'Home'
 })
-export default class Index extends Vue {}
+export default class Home extends Vue {}
 </script>
 
 <style>

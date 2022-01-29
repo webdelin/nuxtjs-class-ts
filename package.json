@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server/index.ts --watch server",
+    "dev": "nuxt-ts",
     "build": "nuxt-ts build",
-    "start": "cross-env NODE_ENV=production ts-node --project 'server/tsconfig.json' server/index.ts",
+    "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
-    "lint:js": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "test": "jest"
   },

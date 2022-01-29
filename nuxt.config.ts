@@ -1,4 +1,5 @@
 export default {
+  telemetry: false,
   head: {
     title: 'nuxt-typescript-decorators',
     htmlAttrs: {
@@ -11,7 +12,6 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  telemetry: false,
   css: [],
   plugins: [],
   components: true,
