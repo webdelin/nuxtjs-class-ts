@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   telemetry: false,
   head: {
     title: 'nuxt-typescript-decorators',
