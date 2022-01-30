@@ -2,10 +2,11 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">Nuxtjs Class</h1>
-      <h2>class, typescript, decorators</h2>
+      <h1 class="title">Nuxtjs Class + Express</h1>
+      <h2>express, class, types and decorators</h2>
       <p>
-        nuxt-class-component, typescript, nuxt-decorators and vuex-decorators
+        @nuxt/types, express, nuxt-class-component, typescript, nuxt-decorators
+        and vuex-decorators
       </p>
       <Counter message="Counter Component" />
       <div class="links">
