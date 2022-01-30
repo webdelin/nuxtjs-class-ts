@@ -15,7 +15,7 @@
           webdelin.de
         </a>
       </div>
-      <p>Autodeploy</p>
+      <p>Webhook Test</p>
     </div>
   </div>
 </template>
