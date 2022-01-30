@@ -4,8 +4,8 @@
     <div>
       <div>State: {{ counter }}</div>
       <div>Getter: {{ getCounter }}</div>
-      <button class="button" @click="add">+</button>
-      <button class="button" @click="subtract">-</button>
+      <button class="button--red" @click="subtract">-</button>
+      <button class="button--green" @click="add">+</button>
     </div>
   </div>
 </template>
@@ -36,16 +36,3 @@ export default class Counter extends Vue {
   private subtract!: () => Promise<void>;
 }
 </script>
-<style lang="css" scoped>
-.button {
-  background: #bbbbbb;
-  border: none;
-  padding: 6px 24px;
-  margin: 12px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background: #008800;
-}
-</style>

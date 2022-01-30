@@ -19,7 +19,7 @@
           href="https://github.com/webdelin/nuxtjs-class-ts"
           target="_blank"
           rel="noopener noreferrer"
-          class="button--green"
+          class="button--blue"
         >
           Github
         </a>
