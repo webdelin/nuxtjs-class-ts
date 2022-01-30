@@ -15,7 +15,7 @@
           webdelin.de
         </a>
       </div>
-      <p>Webhook Test</p>
+      <p>Test</p>
     </div>
   </div>
 </template>
