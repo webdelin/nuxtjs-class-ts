@@ -10,7 +10,7 @@
         and vuex-decorators
       </p>
       <br />
-      <Counter message="Counter Component" />
+      <Counter message="Counter class Component" />
       <br />
       <div class="links">
         <a

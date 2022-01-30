@@ -25,7 +25,7 @@ import { Component, Vue } from 'nuxt-property-decorator';
   name: 'User'
 })
 export default class User extends Vue {
-  private message: string = 'User Component';
+  private message: string = 'User class Component';
 
   private get users() {
     return this.$vxm.user.users;
