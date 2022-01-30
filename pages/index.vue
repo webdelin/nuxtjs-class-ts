@@ -14,8 +14,16 @@
         >
           webdelin.de
         </a>
+
+        <a
+          href="https://github.com/webdelin/nuxtjs-class-ts"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button--red"
+        >
+          Github Code
+        </a>
       </div>
-      <p>Test</p>
     </div>
   </div>
 </template>
