@@ -17,7 +17,7 @@ module.exports = {
     port: 3333
   },
   css: [],
-  plugins: [],
+  plugins: ['~/plugins/vxm.ts'],
   components: true,
   buildModules: ['@nuxt/typescript-build'],
   modules: ['@nuxtjs/axios', '@nuxtjs/dotenv'],

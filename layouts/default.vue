@@ -31,6 +31,7 @@ html {
   color: #3b8070;
   text-decoration: none;
   padding: 10px 30px;
+  cursor: pointer;
 }
 
 .button--green:hover {
@@ -46,6 +47,7 @@ html {
   text-decoration: none;
   padding: 10px 30px;
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .button--red:hover {

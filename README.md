@@ -1,5 +1,8 @@
-# nuxt-typescript-decorators
-The purpose of this project is to demostrate how to use Typescript and Decorators in a nuxt.js project.
+# Nuxtjs Class + Express
+
+## express, class, types and decorators
+
+@nuxt/types, express, nuxt-class-component, typescript, nuxt-decorators and vuex-decorators
 
 ## Build Setup
 
