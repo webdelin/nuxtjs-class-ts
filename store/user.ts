@@ -1,5 +1,5 @@
-import {action, Module, mutation, VuexModule} from 'vuex-class-component';
-import {$axios} from '@/utils/api';
+import { action, Module, mutation, VuexModule } from 'vuex-class-component';
+import { $axios } from '@/utils/api';
 
 interface IGeo {
   lat: number;
@@ -33,14 +33,14 @@ interface IUsers {
 
 @Module({ namespacedPath: 'user', target: 'nuxt' })
 export class UserStore extends VuexModule {
-  private _users: IUsers[] = [];
+  private _users = [] as IUsers[];
 
   get users() {
     return this._users;
   }
 
   @mutation
-  public getUser(users: []) {
+  public getUser(users: IUsers[]) {
     this._users = users;
   }
 
@@ -49,7 +49,6 @@ export class UserStore extends VuexModule {
     const users = await $axios.get<IUsers[]>(
       'https://jsonplaceholder.typicode.com/users'
     );
-    // @ts-ignore
     this.getUser(users.data);
   }
 }
