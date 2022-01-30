@@ -6,7 +6,7 @@ interface IGeo {
   lng: number;
 }
 
-interface IAdress {
+interface IAddress {
   street: string;
   suite: string;
   city: string;
@@ -25,7 +25,7 @@ interface IUsers {
   name: string;
   username: string;
   email: string;
-  address: IAdress;
+  address: IAddress;
   phone: number;
   website: string;
   company: ICompany;
