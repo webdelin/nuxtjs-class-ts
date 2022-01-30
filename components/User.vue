@@ -6,7 +6,7 @@
       <button class="button--green" @click="getUser">Get User</button>
       <ul>
         <li v-for="user in users">
-          {{ user.name }}
+          {{ user.name }} - <strong>{{ user.email }}</strong>
         </li>
       </ul>
     </div>

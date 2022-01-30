@@ -2,20 +2,22 @@
 
 ## express, class, types and decorators
 
-@nuxt/types, express, nuxt-class-component, typescript, nuxt-decorators and vuex-decorators
+@nuxt/types, @nuxt/axios, express, nuxt-class-component, typescript, nuxt-decorators and vuex-decorators
+
+[Demo](https://nuxt.webdelin.com/)
 
 ## Build Setup
 
 ```bash
 # install dependencies
-$ npm install
+$ yarn
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# serve with hot reload at localhost:3333
+$ yarn run dev
 
 # build for production and launch server
-$ npm run build
-$ npm run start
+$ yarn run build
+$ yarn run start
 
 # generate static project
 $ npm run generate
