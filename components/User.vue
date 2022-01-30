@@ -1,6 +1,9 @@
 <template>
-  <div class="hello">
+  <div>
+    <br />
     <h1>{{ message }}</h1>
+    <br />
+    <p>axios working in the store</p>
     <br />
     <div>
       <button class="button--green" @click="getUser">Get User</button>
