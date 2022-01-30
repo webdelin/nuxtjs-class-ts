@@ -1,5 +1,5 @@
-import { Module, mutation, action, VuexModule } from 'vuex-class-component';
-import { $axios } from '~/utils/api';
+import {action, Module, mutation, VuexModule} from 'vuex-class-component';
+import {$axios} from '@/utils/api';
 
 interface IGeo {
   lat: number;
@@ -49,6 +49,7 @@ export class UserStore extends VuexModule {
     const users = await $axios.get<IUsers[]>(
       'https://jsonplaceholder.typicode.com/users'
     );
+    // @ts-ignore
     this.getUser(users.data);
   }
 }
