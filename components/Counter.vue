@@ -1,9 +1,11 @@
 <template>
   <div class="hello">
     <h1>{{ message }}</h1>
+    <br />
     <div>
       <div>State: {{ counter }}</div>
       <div>Getter: {{ getCounter }}</div>
+      <br />
       <button class="button--red" @click="subtract">-</button>
       <button class="button--green" @click="add">+</button>
     </div>

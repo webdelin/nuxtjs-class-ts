@@ -4,7 +4,7 @@
       <Logo />
       <h1 class="title">Nuxtjs Class</h1>
       <h2>class, typescript, decorators</h2>
-      <Counter message="Counter" />
+      <Counter message="Counter Component" />
       <div class="links">
         <a
           href="https://webdelin.de"
@@ -19,7 +19,7 @@
           href="https://github.com/webdelin/nuxtjs-class-ts"
           target="_blank"
           rel="noopener noreferrer"
-          class="button--blue"
+          class="button--red"
         >
           Github
         </a>
