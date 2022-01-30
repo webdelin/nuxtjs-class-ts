@@ -8,7 +8,7 @@
     <div>
       <button class="button--green" @click="getUser">Get User</button>
       <ul>
-        <li v-for="user in users">
+        <li v-for="user in users" :key="user.id">
           {{ user.name }} - <strong>{{ user.email }}</strong>
         </li>
       </ul>
