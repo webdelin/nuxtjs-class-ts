@@ -4,11 +4,14 @@
       <Logo />
       <h1 class="title">Nuxtjs Class + Express</h1>
       <h2>express, class, types and decorators</h2>
+      <br />
       <p>
         @nuxt/types, express, nuxt-class-component, typescript, nuxt-decorators
         and vuex-decorators
       </p>
+      <br />
       <Counter message="Counter Component" />
+      <br />
       <div class="links">
         <a
           href="https://webdelin.de"
