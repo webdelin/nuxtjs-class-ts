@@ -12,7 +12,7 @@
         </li>
       </ul>
       <br />
-      <button class="button--green" @click="getUser">Get User</button>
+      <button class="button--green" @click="getUser">Get Users</button>
       <br />
     </div>
   </div>
