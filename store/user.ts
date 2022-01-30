@@ -1,8 +1,39 @@
 import { Module, mutation, action, VuexModule } from 'vuex-class-component';
 import { $axios } from '~/utils/api';
+
+interface IGeo {
+  lat: number;
+  lng: number;
+}
+
+interface IAdress {
+  street: string;
+  suite: string;
+  city: string;
+  zipcode: number;
+  geo: IGeo;
+}
+
+interface ICompany {
+  name: string;
+  catchPhrase: string;
+  bs: string;
+}
+
+interface IUsers {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: IAdress;
+  phone: number;
+  website: string;
+  company: ICompany;
+}
+
 @Module({ namespacedPath: 'user', target: 'nuxt' })
 export class UserStore extends VuexModule {
-  private _users: [] = [];
+  private _users: IUsers[] = [];
 
   get users() {
     return this._users;
@@ -13,10 +44,11 @@ export class UserStore extends VuexModule {
     this._users = users;
   }
 
-  // eslint-disable-next-line require-await
   @action
   public async addUser(): Promise<void> {
-    const users = await $axios.get('https://jsonplaceholder.typicode.com/users');
+    const users = await $axios.get<IUsers[]>(
+      'https://jsonplaceholder.typicode.com/users'
+    );
     this.getUser(users.data);
   }
 }

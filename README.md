@@ -13,14 +13,14 @@
 $ yarn
 
 # serve with hot reload at localhost:3333
-$ yarn run dev
+$ yarn dev
 
 # build for production and launch server
-$ yarn run build
-$ yarn run start
+$ yarn build
+$ yarn start
 
 # generate static project
-$ npm run generate
+$ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
