@@ -2,11 +2,11 @@
   <div class="hello">
     <h1>{{ message }}</h1>
     <div>
+      <div>State: {{ counter }}</div>
+      <div>Getter: {{ getCounter }}</div>
       <button class="button" @click="add">+</button>
       <button class="button" @click="subtract">-</button>
     </div>
-    <div>State: {{ counter }}</div>
-    <div>Getter: {{ getCounter }}</div>
   </div>
 </template>
 
@@ -40,8 +40,8 @@ export default class Counter extends Vue {
 .button {
   background: #bbbbbb;
   border: none;
-  padding: 6px 12px;
-  margin: 6px;
+  padding: 6px 24px;
+  margin: 12px;
   cursor: pointer;
 }
 
