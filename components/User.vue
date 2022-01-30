@@ -7,9 +7,10 @@
     <br />
     <div>
       <button class="button--green" @click="getUser">Get User</button>
+      <br />
       <ul>
         <li v-for="user in users" :key="user.id">
-          {{ user.name }} - <strong>{{ user.email }}</strong>
+          <strong>{{ user.name }}</strong> - {{ user.email }}
         </li>
       </ul>
     </div>
