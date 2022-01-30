@@ -31,15 +31,23 @@
           Github
         </a>
       </div>
+      <User />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
-
+import Counter from '~/components/Counter.vue';
+import Logo from '~/components/Logo.vue';
+import User from '~/components/User.vue';
 @Component({
-  name: 'Home'
+  name: 'Home',
+  components: {
+    Counter,
+    Logo,
+    User
+  }
 })
 export default class Home extends Vue {}
 </script>
